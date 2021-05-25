@@ -18,6 +18,7 @@ const basicFetch = async (endpoint) => {                  // criei essa função
 }
 
 export default {
+    
     getHomeList: async () => {
         return [
             {
