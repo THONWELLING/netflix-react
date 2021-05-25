@@ -1,0 +1,26 @@
+.MovieColumn{
+    margin-bottom: 30px;
+}
+.MovieColumn h2{
+    margin:0px 0px 0px 30px;
+}
+.MovieColumn--MovieArea{
+    padding: 30px;
+    overflow-x:hidden ;
+}
+.MovieColumn--Movies{
+    width: 999999999px;
+}
+.MovieColumn--Item{
+    display: inline-block;
+    width: 170px;
+    cursor: pointer;
+}
+.MovieColumn--Item img{
+    width: 100%;
+    transform: scale(0.9);
+    transition: all ease 0.3s;
+}
+.MovieColumn--Item img:hover{
+    transform: scale(1);
+}

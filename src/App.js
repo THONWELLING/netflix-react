@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';  // o use state foi usado para salvar a lista
 import Tmdb from './Tmdb';
 import MovieColumn from'./components/MovieColumn';
+import './App.css';
 
 
 export default () => {
@@ -26,5 +27,5 @@ export default () => {
         ))}
       </section>
     </div>
-  );
+  ); 
 }
