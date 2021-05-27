@@ -43,4 +43,5 @@ para eu ter esse tipo de corrossel que vai para um lado e para o outro  eu preci
 
    logo abaixo do firstDate foi criado  uma variavel "genres" dei um loop em item.genres para pegar cada nome e jogar na variavel =>let genres = [];
     for(let i in item.genres){
-        genres.push(items.genres[i].name) e depois la na div genres dei um genres.join(', ') e separei por um ',' e um espaço
+        genres.push(items.genres[i].name) e depois la na div genres dei um genres.join(', ') e separei por um ',' e um espaço.
+        criado 2 buttons dentro da div classname="buttons"  feito estilização  de todas as informações contidas no featured inclusive dos botões
