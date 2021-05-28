@@ -3,12 +3,15 @@ import Tmdb from './Tmdb';
 import MovieColumn from'./components/MovieColumn';
 import './App.css';
 import FeaturedMovie from './components/FeaturedMovie';
+import Header from './components/Header';
 
 
 export default () => {
 
   const [movieList, setMovieList] = useState([]);          //aqui basicamente eu disse  que minha constante é o movieList e que é para setar  essa constante com o useState
-  const [featuredData, setFeaturedData] = useState(null);    
+  const [featuredData, setFeaturedData] = useState(null);
+  const [blackHeader, setBlackHeader] = useState(false);  //aqui criei a variavel responsavel pelo background do topo 
+
   useEffect(() => {
     
     const loadAll = async () => {
@@ -24,12 +27,28 @@ export default () => {
       let chosenInfo = await Tmdb.getMovieInfo(chosen.id, 'tv');
       setFeaturedData(chosenInfo);
     }
-
     loadAll();
   }, []);
 
+  useEffect(()=>{                     //criado  o useEffect separado para monitorar a página 
+    const scrollListener = () => {   // aqui criei a constante
+        if(window.scrollY > 15) {    //nas  linhas abaixo a condicional se o scrollY for maior que 15
+          setBlackHeader(true);      //  coloque o blackHeader como verdadeiro
+      } else {                       //  caso contrário
+        setBlackHeader(false);       //   coloque o mesmo como falso
+      }
+    }
+
+    window.addEventListener('scroll', scrollListener);   // aqui eu add o eventListener para ouvir o scroll
+    return () => {
+      window.removeEventListener('scroll', scrollListener); // aqui removo  o evento qundo o scroll volta para a posição inicial
+    }
+  },[]);
+
   return (
     <div className="page">
+
+      <Header black={blackHeader} />
       {featuredData &&
       <FeaturedMovie item={featuredData} />
       }

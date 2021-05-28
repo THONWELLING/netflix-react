@@ -44,4 +44,9 @@ para eu ter esse tipo de corrossel que vai para um lado e para o outro  eu preci
    logo abaixo do firstDate foi criado  uma variavel "genres" dei um loop em item.genres para pegar cada nome e jogar na variavel =>let genres = [];
     for(let i in item.genres){
         genres.push(items.genres[i].name) e depois la na div genres dei um genres.join(', ') e separei por um ',' e um espaço.
-        criado 2 buttons dentro da div classname="buttons"  feito estilização  de todas as informações contidas no featured inclusive dos botões
+        criado 2 buttons dentro da div classname="buttons"  feito estilização  de todas as informações contidas no featured inclusive dos botões.
+        criado o componente Header.js para controlar um topo que será colocado no site com o logo e um icone do usuário.
+        criado tbm um background preto que terá um funcionamneto dinâmico
+        no app.js foi criado uma variavel "blackHeader" que vai definir se o background vai aparecer ou não.e madei essa propriedade para o componente header 
+        ono arquivo Header.js o export default ({black}) recebe a prop black e no classname={black ? 'black' : ''} uma verificação  ou uma condicional basiacamente quer dizer se o black estiver ok add o black se não  nao faça nada...agora  tenho o controle desse background tudo que eu tenho que fazer agora é monitorar o scroll na página e coloco  o blackHeader true ou false dependendo da situação.
+        agora vou criar um useEffect separado  na linha 33 para add um evento de monitoramento da própria página na linha 34 criado um const scrollListener para monitorar e depois  eu adiciono esse evento na linha 38 window.addEventListener('scroll', scrollListener) e removo o evento quando volta para  a condição  determinada p ele não ser mostrado
