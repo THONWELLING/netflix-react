@@ -59,6 +59,11 @@ export default () => {
           </div>
         ))}
       </section>
+      <footer>
+        Feito Por Wellington Para Fins Únicamente Didáticos<br />
+        Direitos De Imagem Para Netflix<br />
+        Dados Pegos Do Site TheMovieDb.org
+      </footer>
     </div>
   ); 
 }
