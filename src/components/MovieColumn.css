@@ -5,11 +5,10 @@
     margin:0px 0px 0px 30px;
 }
 .MovieColumn--MovieArea{
-    padding: 30px;
-    overflow-x:hidden ;
+    overflow-x: hidden;
 }
 .MovieColumn--Movies{
-    width: 999999999px;
+    transition: all ease .5s;
 }
 .MovieColumn--Item{
     display: inline-block;
@@ -23,4 +22,29 @@
 }
 .MovieColumn--Item img:hover{
     transform: scale(1);
+}
+.MovieColumn--before,
+.MovieColumn--next{
+    position: absolute;
+    width: 40px;
+    height: 225px;
+    background-color: rgba(0 , 0, 0, .5);
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0;
+}
+.MovieColumn--before{
+    left: 0;
+}
+.MovieColumn--next{
+    right: 0;
+}
+.MovieColumn:hover .MovieColumn--before,
+.MovieColumn:hover .MovieColumn--next{
+    opacity: 1;
+    transition: all ease .5s;
 }
