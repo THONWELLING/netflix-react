@@ -8,6 +8,11 @@ export default ({item}) => {
     for(let i in item.genres){
         genres.push(item.genres[i].name);
     }
+
+    let description = item.overview;  //definida uam variavel para a descrição 
+    if(description.length > 200) {
+        description = description.substring(0, 200)+ '...';     //definido o limite de 22 caracteres para o texto da descrição 
+    }
     return(
         <section className="featured" style={{
             backgroundSize: 'cover',
@@ -22,7 +27,7 @@ export default ({item}) => {
                         <div className="container--Year">{firstDate.getFullYear()}</div>
                         <div className="container--Seasons">{item.number_of_seasons} Temporada{item.number_of_seasons!== 1?'s' : ''}</div>
                     </div>
-                    <div className="description">{item.overview}</div>
+                    <div className="description">{description}</div>
                     <div className="buttons">
                         <a href={`/watch/${item.id}`} className="watchButton">Assistir</a>
                         <a href={`/list/add${item.id}`} className="myListButton">+ Minha Lista</a>
