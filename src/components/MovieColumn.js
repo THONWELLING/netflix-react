@@ -4,7 +4,7 @@ import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 
 export default ({title, items}) => {
-    const [scrollX, setScrollX] = useState(-400);
+    const [scrollX, setScrollX] = useState(0);
     const handleLeftArrow = () => {
         let x = scrollX + Math.round(window.innerWidth / 2);     // nessas linha foram determinadas a lógica e a conta matematica queserá usada 
         if(x > 0) {                                              // na função handleLeftArrow. cada lick vai volar 170px até chegar ao 0
@@ -38,7 +38,7 @@ export default ({title, items}) => {
                 }}>
                     {items.results.length > 0 && items.results.map((item, key)=>(
                         <div key={key} className="MovieColumn--Item">
-                            <img src={`https://image.tmdb.org/t/p/w400${item.poster_path}`} alt={item.original_title}/>
+                            <img src={`https://image.tmdb.org/t/p/w300${item.poster_path}`} alt={item.original_title}/>
                         </div>
                     ))} 
                 </div>

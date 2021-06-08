@@ -7,13 +7,12 @@ import Header from './components/Header';
 
 
 export default () => {
-
+  
   const [movieList, setMovieList] = useState([]);          //aqui basicamente eu disse  que minha constante é o movieList e que é para setar  essa constante com o useState
   const [featuredData, setFeaturedData] = useState(null);
   const [blackHeader, setBlackHeader] = useState(false);  //aqui criei a variavel responsavel pelo background do topo 
 
   useEffect(() => {
-    
     const loadAll = async () => {
     
       // pegando a lista total dos items
@@ -54,9 +53,7 @@ export default () => {
       }
       <section className="lists">
         {movieList.map((item,key)=>(              //vou dar um loop/mapear o  movieList e usar uam função  para exibir é necessária  em todo loop o uso de uma key
-          <div>
-            <MovieColumn key={key} title={item.title} items={item.items} />                                
-          </div>
+            <MovieColumn key={key} title={item.title} items={item.items} /> 
         ))}
       </section>
       <footer>
@@ -64,10 +61,11 @@ export default () => {
         Direitos De Imagem Para Netflix<br />
         Dados Pegos Do Site TheMovieDb.org
       </footer>
-      
-      <div className="loading">
-        <img src="https://media.filmelier.com/noticias/br/2020/03/Netflix_LoadTime.gif" alt="Loading" />;
-      </div>
+      {movieList.length <= 0 &&
+        <div className="loading">
+          <img src="https://media.filmelier.com/noticias/br/2020/03/Netflix_LoadTime.gif" alt="Loading" />;
+        </div>
+      }
     </div>
   ); 
 }

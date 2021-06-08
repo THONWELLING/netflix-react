@@ -48,3 +48,9 @@
     opacity: 1;
     transition: all ease .5s;
 }
+@media (max-width:760px) {
+    .MovieColumn--before,
+    .MovieColumn--next {
+        opacity: 1;
+    }
+}
