@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';  // o use state foi usado para salvar a lista
+import navBar from './components/navBar';
 import Tmdb from './Tmdb';
 import MovieColumn from'./components/MovieColumn';
 import './App.css';
@@ -40,13 +41,13 @@ export default () => {
 
     window.addEventListener('scroll', scrollListener);   // aqui eu add o eventListener para ouvir o scroll
     return () => {
-      window.removeEventListener('scroll', scrollListener); // aqui removo  o evento qundo o scroll volta para a posição inicial
+      window.removeEventListener('scroll', scrollListener); // aqui removo  o evento quando o scroll volta para a posição inicial
     }
   },[]);
 
   return (
     <div className="page">
-
+      <navBar />
       <Header black={blackHeader} />
       {featuredData &&
       <FeaturedMovie item={featuredData} />

@@ -25,10 +25,10 @@ export default ({title, items}) => {
             <h2>{title}</h2>
 
             <div className="MovieColumn--before" onClick={handleLeftArrow}>
-                <NavigateBeforeIcon style={{fontSize: 50}} />
+                <NavigateBeforeIcon style={{fontSize: 60}} />
             </div>
             <div className="MovieColumn--next" onClick={handleRightArrow}>
-            <NavigateNextIcon style={{fontSize: 50}} />
+            <NavigateNextIcon style={{fontSize: 60}} />
             </div>
             
             <div className="MovieColumn--MovieArea">

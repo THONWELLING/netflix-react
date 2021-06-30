@@ -13,7 +13,7 @@ Header{
     transition: all ease .5s;
 }
 header.black{
-    background-color: #141414;
+    background-color: rgba(14, 14, 14, 0.9);
 }
 .header--logo{
     height: 30px;

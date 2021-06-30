@@ -49,4 +49,9 @@ para eu ter esse tipo de corrossel que vai para um lado e para o outro  eu preci
         criado tbm um background preto que terá um funcionamneto dinâmico
         no app.js foi criado uma variavel "blackHeader" que vai definir se o background vai aparecer ou não.e madei essa propriedade para o componente header 
         ono arquivo Header.js o export default ({black}) recebe a prop black e no classname={black ? 'black' : ''} uma verificação  ou uma condicional basiacamente quer dizer se o black estiver ok add o black se não  nao faça nada...agora  tenho o controle desse background tudo que eu tenho que fazer agora é monitorar o scroll na página e coloco  o blackHeader true ou false dependendo da situação.
-        agora vou criar um useEffect separado  na linha 33 para add um evento de monitoramento da própria página na linha 34 criado um const scrollListener para monitorar e depois  eu adiciono esse evento na linha 38 window.addEventListener('scroll', scrollListener) e removo o evento quando volta para  a condição  determinada p ele não ser mostrado
+        agora vou criar um useEffect separado  na linha 33 para add um evento de monitoramento da própria página na linha 34 criado um const scrollListener para monitorar e depois  eu adiciono esse evento na linha 38 window.addEventListener('scroll', scrollListener) e removo o evento quando volta para  a condição  determinada p ele não ser mostrado.
+        -foram adicionadas no moviecolun.js os icones de flechas que vai servir para movimentar os filmes/series icones importados do site materalUI.com
+        -adicionado nos icones a função onClick
+        -foi definido as funções handleLeftArrow e handleRightArrow 
+        -fo add um width dinâmico ao MovieClumn--Movies
+        algumas descrições dos filmes/series estavam muito extenso por isso fiz uma manipulação para limitar a quantidade de caracteres que serão exibidos.
