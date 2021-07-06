@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';  // o use state foi usado para salvar a lista
-import navBar from './components/navBar';
 import Tmdb from './Tmdb';
 import MovieColumn from'./components/MovieColumn';
 import './App.css';
 import FeaturedMovie from './components/FeaturedMovie';
 import Header from './components/Header';
+
 
 
 export default () => {
@@ -47,7 +47,6 @@ export default () => {
 
   return (
     <div className="page">
-      <navBar />
       <Header black={blackHeader} />
       {featuredData &&
       <FeaturedMovie item={featuredData} />
