@@ -17,7 +17,7 @@ const basicFetch = async (endpoint) => {                  // criei essa função
     return json;                                          //aqui ele me retorna o arquivo json com o resultado (informações)
 }
 
-export default {
+const Tmdb =  {
     
     getHomeList: async () => {
         return [
@@ -82,4 +82,7 @@ export default {
 
         return info;
     }
-}   
+}  
+
+
+export default Tmdb;

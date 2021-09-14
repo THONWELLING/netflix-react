@@ -7,7 +7,7 @@ import Header from './components/Header';
 
 
 
-export default () => {
+const App = () => {
   
   const [movieList, setMovieList] = useState([]);          //aqui basicamente eu disse  que minha constante é o movieList e que é para setar  essa constante com o useState
   const [featuredData, setFeaturedData] = useState(null);
@@ -69,3 +69,5 @@ export default () => {
     </div>
   ); 
 }
+
+export default App

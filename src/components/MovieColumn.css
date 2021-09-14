@@ -1,56 +1,58 @@
-.MovieColumn{
-    margin-bottom: 30px;
+.MovieColumn {
+  margin-bottom: 30px;
 }
-.MovieColumn h2{
-    margin:0px 0px 0px 30px;
+.MovieColumn h2 {
+  margin: 0px 0px 0px 30px;
 }
-.MovieColumn--MovieArea{
-    overflow-x: hidden;
+.MovieColumn--MovieArea {
+  overflow-x: hidden;
 }
-.MovieColumn--Movies{
-    transition: all ease .5s;
+.MovieColumn--Movies {
+  transition: all ease 0.5s;
 }
-.MovieColumn--Item{
-    display: inline-block;
-    width: 170px;
-    cursor: pointer;
+.MovieColumn--Item {
+  display: inline-block;
+  width: 170px;
+  cursor: pointer;
+  border-radius: 8px;
 }
-.MovieColumn--Item img{
-    width: 100%;
-    transform: scale(0.9);
-    transition: all ease 0.3s;
+.MovieColumn--Item img {
+  width: 100%;
+  transform: scale(0.9);
+  transition: all ease 0.3s;
+  border-radius: 8px;
 }
-.MovieColumn--Item img:hover{
-    transform: scale(1);
+.MovieColumn--Item img:hover {
+  transform: scale(1);
 }
 .MovieColumn--before,
-.MovieColumn--next{
-    position: absolute;
-    width: 40px;
-    height: 225px;
-    background-color: rgba(0 , 0, 0, .5);
-    z-index: 99;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    cursor: pointer;
-    opacity: 0;
+.MovieColumn--next {
+  position: absolute;
+  width: 40px;
+  height: 225px;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0;
 }
-.MovieColumn--before{
-    left: 0;
+.MovieColumn--before {
+  left: 0;
 }
-.MovieColumn--next{
-    right: 0;
+.MovieColumn--next {
+  right: 0;
 }
 .MovieColumn:hover .MovieColumn--before,
-.MovieColumn:hover .MovieColumn--next{
-    opacity: 1;
-    transition: all ease .5s;
+.MovieColumn:hover .MovieColumn--next {
+  opacity: 1;
+  transition: all ease 0.5s;
 }
-@media (max-width:760px) {
-    .MovieColumn--before,
-    .MovieColumn--next {
-        opacity: 1;
-    }
+@media (max-width: 760px) {
+  .MovieColumn--before,
+  .MovieColumn--next {
+    opacity: 1;
+  }
 }
